@@ -19,7 +19,9 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            Console.WriteLine("Zheng Jie");
+            Console.WriteLine("e0046825@u.nus.edu");
+
         }
     }
 }
