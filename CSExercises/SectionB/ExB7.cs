@@ -18,13 +18,14 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            String distanceString = Console.ReadLine();
+            double distance = Convert.ToDouble(distanceString);
+            Console.WriteLine(CalculateFare(distance));
         }
 
         public static double CalculateFare(double distance)
         {
-            //YOUR CODE HERE
-            return 0;
+            return 2.4 + distance*0.4;
 
         }
     }

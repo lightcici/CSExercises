@@ -16,13 +16,16 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            String distanceString = Console.ReadLine();
+            double distance = Convert.ToDouble(distanceString);
+            Console.WriteLine ("{0:0.00}", CalculateFare(distance));
+
         }
 
         public static double CalculateFare(double distance)
         {
-            //YOUR CODE HERE
-            return 0;
+            double result = 2.4 + distance * 0.4;
+            return Math.Ceiling(result * 10) / 10;
 
         }
     }

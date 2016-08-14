@@ -19,14 +19,26 @@ namespace CSExercises
 
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            String aString = Console.ReadLine();
+            String bString = Console.ReadLine();
+            String cString = Console.ReadLine();
+            double a = Convert.ToDouble(aString);
+            double b = Convert.ToDouble(bString);
+            double c = Convert.ToDouble(cString);
+
+            if (a + b >= c || a + c >= b || b + c >= a)
+            {
+                Console.WriteLine(CalculateArea(a, b, c));
+            }
+            else Console.WriteLine("NaN");
 
         }
 
         public static double CalculateArea(double a, double b, double c)
         {
-            //YOUR CODE HERE
-            return 0;
+            double s = (a + b + c) / 2;
+            double area = Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+            return area;
         }
     }
 }
