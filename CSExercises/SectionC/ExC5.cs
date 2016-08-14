@@ -17,15 +17,26 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            String inputString = Console.ReadLine();
+            int input = Convert.ToInt32(inputString);
+            if (IsArmstrongNumber(input) == true)
+            {
+                Console.WriteLine("Armstrong number");
+            }
+            else Console.WriteLine("Not armstrong number");
 
         }
 
 
         public static bool IsArmstrongNumber(int n)
         {
-            //YOUR CODE HERE
-            return false;
+            int sum = (int)(Math.Pow(n % 10, 3) + Math.Pow(n/10 % 10, 3) + Math.Pow(n / 100 % 10, 3));
+            if (sum == n)
+            {
+                return true;
+            }
+            else return false;
+          
 
         }
     }

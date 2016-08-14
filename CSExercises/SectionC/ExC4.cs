@@ -21,16 +21,30 @@ namespace CSExercises
         public static void Main(string[] args)
         {
 
-            //Your code here
-
+            String kmString = Console.ReadLine();
+            double km = Convert.ToDouble(kmString);
+            double distance = Math.Ceiling(km * 10);
+            Console.WriteLine(CalculateFare(distance));
 
 
         }
 
         public static double CalculateFare(double distance)
         {
-            //YOUR CODE HERE
-            return 0;
+            double fare = 0;
+            if (distance >= 0 && distance <= 5)
+            {
+                fare = 2.4;
+            }
+            else if (distance <= 90)
+            {
+                fare = 2.4 + 0.04*(distance-5);
+            }
+            else if (distance > 90)
+            {
+                fare = 2.4 + 0.04 * 85 + 0.05*(distance-90);
+            }
+            return fare;
 
 
 
